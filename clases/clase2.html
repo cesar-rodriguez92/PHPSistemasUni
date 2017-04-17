@@ -1,0 +1,173 @@
+  <style type="text/css">
+    table,td,th{
+      border: 1px dashed black;
+      border-collapse: collapse;
+    }
+    table#exp{
+      width: 400px;
+      margin: auto;
+    }
+    table#exp, #exp td{
+      border: 1px solid black;
+    }
+    [rowspan],[colspan]{
+      background-color: yellow;
+    }
+
+  </style>
+
+<div class="tituloClase">Clase 2</div>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Listas anidadas</a></li>
+    <li><a href="#tabs-2">Tablas</a></li>
+    <li><a href="#tabs-3">Expansion de celdas</a></li>
+    <li><a href="#tabs-4">Formularios</a></li>
+    <li><a href="#tabs-5">CSS</a></li>
+    <li><a href="#tabs-6">Selectores de CSS</a></li>
+    <li><a href="#tabs-7">Posicionamiento</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>Se puede incluir una lista dentro de otra, siempre y cuando la definicion de la lista interna se encuentre dentro de un elemento (li) o (dd)
+      <br>Ejemplo:<br>
+      <ol>
+  <li>Etiquetas simple
+  <ol>
+    <li>Cabeceras</li>
+    <li>Parrafos</li>
+    <li>Enlaces</li>
+    <li>Imagenes</li>
+  </ol>
+  </li>
+  <li>Etiquetas compuestas
+  <ol>
+    <li>Listas ordenadas</li>
+    <li>Listas NO ordenadas</li>
+    <li>Listas de definicion</li>
+  </ol>
+  </li>
+  <li>Tablas</li>
+  <li>Formularios</li>
+</ol>
+
+    </p>
+  </div>
+  <div id="tabs-2">
+    <p>Una table organiza la información en filas y columnas, cada fila está definida por la etiqueta <b>(tr)</b> (table row) y cada elemento de la columna por una celda, definida por la etiqueta <b>(td)</b> (table data) o <b>(th)</b> (table header)<br> 
+    Ejemplo:<br>
+      <table>
+        <tr><th>Columna 1</th><th>Columna 2</th><th>Columna 3</th></tr>
+        <tr><th>Fila 1</th><td>Dato 1</td><td>Dato 2</td><td>Dato 3</td></tr>
+        <tr><th>Fila 2</th><td>Dato 4</td><td>Dato 5</td><td>Dato 6</td></tr>
+        <tr><th>Fila 3</th><td>Dato 5</td><td>Dato 8</td><td>Dato 9</td><td>Dato 10</td></tr>
+      </table>
+    </p>
+  </div>
+  <div id="tabs-3">
+    <p><b>Definicion:</b><br>
+  De maner predeterminada una celda ocupa el ancho de una columna y el alto de una fila, podemos modificar este comportamiento con los atributos colspan y rowspan los cuales nos permiten definir que una celda ocupe más de una fila o más de una columna respectivamente, el valor del atributo debe ser numérico y entero indicará el número de filas o columnas que ocupará la celda.<br>Ejemplo: <br>
+
+  <table id="exp">
+    <tr><td>1</td><td colspan="2">2 (colspan)</td><td>3</td><td>4</td></tr>
+    <tr><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+    <tr><td>9</td><td rowspan="2">10 (rowspan)</td><td>11</td><td>12</td></tr>
+    <tr><td>13</td><td>14</td><td>15</td><td>16</td></tr>
+  </table>
+    </p>
+  </div>
+  <div id="tabs-4">
+    <p><b>Definicion:</b><br>Es un elemento html que permite recolectar datos y enviarlos al servidor. estructura de un formulario. <br>
+
+<div id="accordion">
+  <h3>Atributos</h3>
+  <div>
+    <p>
+    <b>Action: </b> Indica a donde sera enviado el formulario <BR>
+    <b>Method: </b> EL metodo mediante el cual es enviado(GET o POST)<BR>
+    <b>Enctype: </b> Tipo de codificacion utilizado para enviar el formulario<BR>
+    </p>
+  </div>
+  <h3>Elementos del formulario</h3>
+  <div>
+    <p>
+    <b>input: </b> Es el elemento principal de recolección de datos ya que posee varios tipos de recoleccion <button id="opener">Tipos de input</button> <BR>
+
+    <div id="dialog" title="Tipos de input">
+      <ul>
+        <li><b>text: </b>Presenta una línea de entrada de texto</li>
+        <li><b>password: </b>Presenta una línea de entrada de texto, lo que el usuario digita se visualiza como un símbolo, generalmente un círculo o un asterisco</li>
+        <li><b>hidden: </b>permite definir un dato que será enviado al servidor el cual no podrá ser visualizado por el usuario</li>
+        <li><b>radio: </b>presenta un conjunto de datos de los cuales el usuario podrá escoger solo uno</li>
+        <li><b>checkbox: </b>Presenta un conjunto de datos y el usuario podrá escoger uno o varios datos</li>
+        <li><b>file: </b>Presenta un elemento de selección de archivo, el usuario podrá seleccionar uno para ser enviado al servidor, debe ser usado en conjunto con el método POST y la codificación multipart/form-data</li>
+        <li><b>submit: </b>Presenta un botón que al ser activado iniciará el envío de los datos al servidor</li>
+        <li><b>reset: </b>Presenta un botón que al ser activado eliminara todos los datos asignados en el formulario</li>
+      </ul>
+    </div>
+
+    <b>select: </b> presenta una lista de selección desplegable, el usuario podrá seleccionar una opción. Si se utiliza el archivo el atributo multiple en la creación el usuario podrá seleccionar múltiples <BR>
+    <b>textArea: </b> Presenta un recuadro de texto, el usuario podrá asignar varias línea de texto, el número de filas a presentar se controla con el atributo rows y el de columnas con el atributo columns.<BR>
+    <b>label: </b> Asocia una cadena de texto a un elemento del formulario, la asociación se lleva a cabo por el valor del atributo id del elemento<BR>
+    <b>fieldSet: </b> Agrupa varios elementos del formulario en un recuadro de texto al cual puede asignársele un título con la etiqueta legend.<BR>
+    </p>
+  </div>
+</div>
+
+    </p>
+  </div>
+  <div id="tabs-5">
+    <p><b>Definicion:</b><br>
+  Los estilos permiten modificar la apariencia predeterminada de los elementos html, la modificación se realiza utilizando el sgte formato: 
+  <font style="color: red;">propiedad: valor;</font>
+<br>Donde:
+<li><b>propiedad:</b> indica la característica del elemento html que queremos cambiar</li>
+<li><b>valor:</b> el número valor para la característica indicada</li>
+    </p>
+  </div>
+  <div id="tabs-6">
+    <p><b>Definicion:</b><br>
+  Cadena de texto que especifica el elemento html al cual le van a aplicar las definiciones de estilo.<br>
+  Existen diferentes tipos de selectores:
+  <dl>
+    <dt>Selector universal(*)
+      <dd>Especifica todo elemento html</dd></dt>
+    <dt>Selector de etiqueta
+      <dd>Selector de etiqueta</dd></dt>
+    <dt>Selector de id
+      <dd>Utiliza el valor del atributo id precedido del carácter “#” para especificar el elemento</dd></dt>
+    <dt>Selector de clase
+      <dd>Utiliza el valor del atributo class precedido del carácter “.” para especificar el elemento</dd></dt>
+    <dt>Selector descendiente
+      <dd>Especifica un elemento que se encuentra dentro de otro elemento, tiene el sgte formato.<br>
+       selector 1 selector 2</dd></dt>
+    <dt>Selector de hijos
+      <dd>especifica un elemento que se encuentra definido directamente dentro de otro elemento<br>
+      selector 1>selector 2</dd></dt>
+    <dt>Selector adyacente
+      <dd>Especifica un elemento que se encuentra definido inmediatamente después de otro elemento<br>
+      selector 1+selector 2</dd></dt>
+    <dt>Selectores de atributo
+      <dd>Utilizan el nombre del atributo o el nombre y su valor para seleccionar un elemento html<br>
+        <li>[nombreAtributo]</li>
+        <li>[nombreAtributito = “valorAtributo]</li>
+      </dd>
+    </dt>
+
+  </dl>
+    </p>
+  </div>
+  <div id="tabs-7">
+    <p><b>Definicion:</b><br>
+  Al desplegar el contenido de un documento html el navegador posiciona los elementos de acuerdo al orden de aparición y al tipo de elemento
+<li><b>Elemento en línea:</b> Se muestra a continuación de cualquier otro elemento en línea(imágenes, enlaces, etc)</li>
+<li><b>Elemento en bloque:</b> Se muestra separado del resto del contenido, incluyendo un salto de línea antes y después del elemento, algunos incluiran una línea en blanco antes y después</li>
+<br><b>Marco de referencia (position) </b>
+<ol>
+  <li><b>relative: </b>el marco de ref. sera la posicion predeterminada del elemento</li>
+  <li><b>absolute: </b>el marco de ref. sera el ultimo contenedor posicionado, si no lo hubiera será el body</li>
+  <li><b>fixed: </b>El marco de ref. sera la ventana del navegador</li>
+</ol>
+    </p>
+  </div>
+</div>

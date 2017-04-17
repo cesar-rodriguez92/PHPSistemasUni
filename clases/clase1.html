@@ -1,0 +1,71 @@
+<div class="tituloClase">Clase 1</div>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Tecnologia WEB</a></li>
+    <li><a href="#tabs-2">Sitios Virtuales</a></li>
+    <li><a href="#tabs-3">Rutas</a></li>
+    <li><a href="#tabs-4">Listas</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>Implementada en arquitectura cliente/servidor tiene tres componentes básicos:
+      <ul>
+        <li><b>Servidor:</b></li>
+        Encargado de proporcionar archivos desde un directorio predeterminado conocido como el directorio de publicación. Es a los archivos dentro de este directorio a los cuales los clientes tendrán acceso.
+        Es un programa como iis, apache, ngnix, etc; que espera solicitudes de archivos de los clientes en los puertos estándar 80/tcp y 443/tcp
+        <li><b>Cliente:</b></li>
+        Es un programa encargado de solicitar o requerir archivos al servidor y mostrarlos (desplegarlos) en la ventana de la aplicación; de manera predeterminada recuperara o desplegara archivos HTML pero esta en la capacidad de mostrar cualquier archivo para el cual tenga el correspondiente conector(plugin)
+        Ejemplos: de clientes web: Chrome, Firefox, iexplorer, edge, safari, opera, etc
+        <li><b>Lenguaje de comunicación de red:</b></li>
+        Es el lenguaje que utiliza el cliente y servidor para comunicarse, en este caso e lenguaje es el HTTP o protocolo de transferencia de hiper texto. Este lenguaje tiene derivado https, que realiza la comunicación de manera encriptada entre cliente y servidor utilizando la tecnología PKI(Public Key Infraestructure)
+      </ul>
+    </p>
+  </div>
+  <div id="tabs-2">
+    <p><b>Pasos para la creacion</b>
+      <ol>
+        <li>Creacion de la carpeta de publicación</li>
+        <li>Configuración de sitio virtual en uwamp
+          <ul>Datos necesarios
+            <li>Nombre del servidor</li>
+            <li>Carpeta de publicación</li>
+          </ul>
+        </li>
+        <li>Agregar al archivo host el nombre del servidor asociado a la ip 127.0.0.1</li>
+      </ol>
+    </p>
+  </div>
+  <div id="tabs-3">
+    <p><b>Tipos de Rutas</b>
+  <ul>
+    <li>Rutas Absolutas
+      <dd>Esta forma inicia con la carpeta de publicación representada por el carácter “/” y a continuación se nombran todos los nombres de directorios que se deben recorrer hasta llegar al archivo requerido</dd>
+    </li>
+    <li>Rutas Relativas
+      <dd>Esta forma toma en consideración la ubicación actual del archivo que incluye al otro archivo tomando en consideración las sgres abreviaturas:
+      <ul>
+      <li> <b>.</b>  -------> Directorio actual</li>
+      <li> <b>..</b> -------> Directorio padre</li>
+      </ul>
+      </dd>
+    </li>
+  </ul>
+    </p>
+  </div>
+
+  <div id="tabs-4">
+    <p><b>Tipos de listas</b>
+    <ul>
+        <li>Listas Ordenadas (OL)
+        <dd>Presenta la información identificada por un número , cada nodo de información es presentado como un ítem</dd>
+        </li>
+        <li>Listas No Ordenadas (UL)
+        <dd>Presenta la información sin numeración</dd>
+        </li>
+        <li>Listas De Definicion (DL)
+          <dd>Presenta la información identificada por un título (DT y cada información es mostrada como definition data(DD)</dd>
+        </li>
+    </ul>
+    </p>
+  </div>
+</div>

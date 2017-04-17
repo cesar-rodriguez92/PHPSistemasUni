@@ -3,51 +3,87 @@
 <head>
 	<meta charset="UTF-8">
 	<title>PHPLAB</title>
-	<link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="./css/styles.css">
-	<script src="/js/jquery.js"></script>
-	<script src="/bootstrap/js/bootstrap.js"></script>
-<script type="text/javascript">
-	$().dropdown('toggle')
-</script>
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="./jquery-ui/jquery-ui.css">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./jquery-ui/jquery-ui.js"></script>
+
+	<script type="text/javascript">
+		function llamarAClase1(){
+			var callback_function = function(){
+			  $( "#tabs" ).tabs();
+			  $("#presentacion").hide();
+			}
+			$('#sesiones').load('/clases/clase1.html', null,callback_function )
+		}
+		function llamarAClase2(){
+			var callback_function = function(){
+			  $( "#tabs" ).tabs();
+			  $("#presentacion").hide();
+			  $( "#accordion" ).accordion({
+      			collapsible: true,
+      			heightStyle: "content"
+    		  });
+    		  /*Dialog*/
+				 $( "#dialog" ).dialog({
+				 	  width: 700,
+				      autoOpen: false,
+				      show: {
+				        effect: "blind",
+				        duration: 1000
+				      },
+				      hide: {
+				        effect: "explode",
+				        duration: 1000
+				      }
+				    });
+				 
+				    $( "#opener" ).on( "click", function() {
+				      $( "#dialog" ).dialog( "open" );
+				    });
+			}
+			$('#sesiones').load('/clases/clase2.html', null,callback_function )
+		}
+
+		function llamarAClase3(){
+			var callback_function = function(){
+			  $( "#tabs" ).tabs();
+			  $("#presentacion").hide();
+			}
+			$('#sesiones').load('/clases/clase3.html', null,callback_function )
+		}
+	</script>
 
 </head>
 <body>
-<div id="contenedor">
-	<div id="cabecera"></div>
-	<div id="menu">
-		<!-- ul>(li>a[href=hoja$.html]{hoja $})*5 --> 
-		<ul>
-			<li><a href="hoja1.html" class="dropdown">Clase 1</a></li>
-			<li><a href="hoja2.html">Clase 2</a></li>
-			<li><a href="hoja3.html">Clase 3</a></li>
-			<li><a href="hoja4.html">Clase 4</a></li>
-			<li><a href="hoja5.html">Clase 5</a></li>
-		</ul>
+	<div id="contenedor">
+		<div id="cabecera"></div>
+		<div id="menu">
+			<!-- ul>(li>a[href=hoja$.html]{hoja $})*5 --> 
+			<ul>
+				<li><a href="/" style="background-image: url('./iconos/house_go.png');" >Home</a></li>
+				<li><a href="javascript: llamarAClase1();" id="btnclase1">Clase 1</a></li>
+				<li><a href="javascript: llamarAClase2();" id="btnclase2">Clase 2</a></li>
+				<li><a href="javascript: llamarAClase3();" id="btnclase2">Clase 3</a></li>
+				<li><a href="hoja4.html">Clase 4</a></li>
+				<li><a href="hoja5.html">Clase 5</a></li>
+			</ul>
+		</div>
+		<div id="contenido" class="jumbotron">
+		<div id="presentacion" style="margin: auto; text-align: center; ">
+			<h2>Bienvenido al curso de PHP Nivel I</h2><br>
+			<img src="./img/presentacion.png">
+		</div >
+<div id="sesiones">
+
+</div>			
+
+
+		</div>
+		<div id="pie">
+			&copy;2017 Sistemas UNI
+		</div>
 	</div>
-
-
-
-	<div id="pie">
-	&copy;2017 Sistemas UNI
-</div>
-</div>
-
-<div class="container">
-  <h2>Dropdowns</h2>
-  <p>The .dropdown class is used to indicate a dropdown menu.</p>
-  <p>Use the .dropdown-menu class to actually build the dropdown menu.</p>
-  <p>To open the dropdown menu, use a button or a link with a class of .dropdown-toggle and data-toggle="dropdown".</p>                                          
-  <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li><a href="hoja1.html">HTML</a></li>
-      <li><a href="#">CSS</a></li>
-      <li><a href="#">JavaScript</a></li>
-    </ul>
-  </div>
-</div>
-
 </body>
 </html>
