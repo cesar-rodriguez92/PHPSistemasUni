@@ -63,6 +63,21 @@
 
 }
 
+#formulario form{
+	width: 700px;
+	margin: 20px auto;
+
+}
+#formulario label{
+	display: inline-block;
+	width: 200px;
+}
+
+#formulario .error{
+	color: red;
+	font-weight: bolder;
+	font-size:  1.2em;
+}
 
 #pie{
 	width: 900px;
@@ -92,4 +107,24 @@
     font-weight: bolder;
 }
 
-.ui-jqueryuielements { width: 250px; }
+.ui-jqueryuielements { 
+	width: 250px; 
+}
+
+
+
+.ui-tooltip {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font: bold 14px"Helvetica Neue", Sans-Serif;
+    text-transform: uppercase;
+    box-shadow: 0 0 7px green;
+}
+.ui-tooltip.warning {
+    color: #44ba4c;
+    background: #378e3d;
+}
+.ui-tooltip.danger {
+    color: #212942;
+    background: #3b5a99;
+}

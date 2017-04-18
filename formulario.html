@@ -1,0 +1,27 @@
+<script type="text/javascript" src="/js/formulario.js"></script>
+<div class="btn btn-success" style="margin: auto; display: block; font-size: 2em">Reg&iacute;strate al curso PHP Nivel I</div>
+
+  <div id="contenedor">
+    <div id="formulario">
+    <!--(label[for=c$]+input[id=c$][name=c$]+span[class=error][id=e$]+br)*4-->
+      <form action="" onsubmit="return validar()">
+        <label for="c1">Nombre</label>
+        <input type="text" id="c1" name="c1" title="Ingresa tu nombre completo">
+        <span class="error" id="e1"></span>
+        <br>
+        <label for="c2">Apellido paterno</label>
+        <input type="text" id="c2" name="c2" title="Ingresa tu apellido paterno">
+        <span class="error" id="e2"></span>
+        <br>
+        <label for="c3">Apellido Materno</label>
+        <input type="text" id="c3" name="c3" title="Ingresa tu apellido materno">
+        <span class="error" id="e3"></span>
+        <br>
+        <label for="c4">Correo</label>
+        <input type="text" id="c4" name="c4" title="Ingresa tu correo">
+        <span class="error" id="e4"></span>
+        <br><br>
+        <input type="submit" value="Enviar" class="btn btn-default">
+      </form>
+    </div>
+  </div>
