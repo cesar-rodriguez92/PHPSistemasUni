@@ -78,9 +78,9 @@
 	width: 1250px;
 	margin: auto;
 
-    color: #a94442;
-    background-color: #f2dede;
-    border-color: #ebccd1;
+    color: white;
+    background-color: #31b0d5;
+    border-color: #269abc;
 
     padding: 15px;
     margin-bottom: 20px;
@@ -91,3 +91,5 @@
     text-transform: uppercase;
     font-weight: bolder;
 }
+
+.ui-jqueryuielements { width: 250px; }

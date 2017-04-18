@@ -50,8 +50,22 @@
 			var callback_function = function(){
 			  $( "#tabs" ).tabs();
 			  $("#presentacion").hide();
+			  $( "#datosjs" ).accordion({
+      heightStyle: "content",
+      collapsible: true
+    });
+
 			}
 			$('#sesiones').load('/clases/clase3.html', null,callback_function )
+		}
+
+		function llamarAClase4(){
+			var callback_function = function(){
+			  $( "#tabs" ).tabs();
+			  $("#presentacion").hide();
+			  $( "#jqueryuielements" ).menu();
+			}
+			$('#sesiones').load('/clases/clase4.html', null,callback_function )
 		}
 	</script>
 
@@ -66,7 +80,7 @@
 				<li><a href="javascript: llamarAClase1();" id="btnclase1">Clase 1</a></li>
 				<li><a href="javascript: llamarAClase2();" id="btnclase2">Clase 2</a></li>
 				<li><a href="javascript: llamarAClase3();" id="btnclase2">Clase 3</a></li>
-				<li><a href="hoja4.html">Clase 4</a></li>
+				<li><a href="javascript: llamarAClase4();" id="btnclase2">Clase 4</a></li>
 				<li><a href="hoja5.html">Clase 5</a></li>
 			</ul>
 		</div>

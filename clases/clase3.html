@@ -6,39 +6,122 @@
     <li><a href="#tabs-2">JavaScript</a></li>
   </ul>
   <div id="tabs-1">
-    <p>Se puede incluir una lista dentro de otra, siempre y cuando la definicion de la lista interna se encuentre dentro de un elemento (li) o (dd)
-      <br>Ejemplo:<br>
-      <ol>
-  <li>Etiquetas simple
-  <ol>
-    <li>Cabeceras</li>
-    <li>Parrafos</li>
-    <li>Enlaces</li>
-    <li>Imagenes</li>
-  </ol>
-  </li>
-  <li>Etiquetas compuestas
-  <ol>
-    <li>Listas ordenadas</li>
-    <li>Listas NO ordenadas</li>
-    <li>Listas de definicion</li>
-  </ol>
-  </li>
-  <li>Tablas</li>
-  <li>Formularios</li>
-</ol>
+    <p><b>Definicion:</b><br>
 
+Un layout define la distribución general de los elementos html en un documento web.
+  De manera general un layout divide el area de presentación del documento en secciones donde se mostrarán elementos de información relacionados: cabeceras, barras o menus de navegación contenido principal, contenido relacionado o secundario, pies etc.
+
+  Inicialmente se utilizó el elemento tabla de html para definir la distribución de los elementos html en el documento, actualmente está practica está considerada obsoleta y se prefiere el uso de CSS para realizar el diseño del layout.
+
+  Hasta html 4 se utilizaban los contenedores div o span para genrerar las zonas componentes de un layout, actualmente la version 5 de html incluye los elementos semanticos correspondientes para generar dichos elementos: header, nav, section, article, aside, footer, details summary.
+
+  La forma principal de crear layouts utilizando CSS es usando la propieda float.
+
+  Los layout más comunes se nombran por su estructura general: número de columnas (dos columnas, tres columnas), por la inclusión de una cabecera o pie: dos columnas cabecera y pie.
     </p>
   </div>
   <div id="tabs-2">
-    <p>Una table organiza la información en filas y columnas, cada fila está definida por la etiqueta <b>(tr)</b> (table row) y cada elemento de la columna por una celda, definida por la etiqueta <b>(td)</b> (table data) o <b>(th)</b> (table header)<br> 
-    Ejemplo:<br>
-      <table>
-        <tr><th>Columna 1</th><th>Columna 2</th><th>Columna 3</th></tr>
-        <tr><th>Fila 1</th><td>Dato 1</td><td>Dato 2</td><td>Dato 3</td></tr>
-        <tr><th>Fila 2</th><td>Dato 4</td><td>Dato 5</td><td>Dato 6</td></tr>
-        <tr><th>Fila 3</th><td>Dato 5</td><td>Dato 8</td><td>Dato 9</td><td>Dato 10</td></tr>
-      </table>
-    </p>
+    <p><b>Definicion:</b><br>
+      Lenguaje de programación interpretado cuyo entorno de ejecución es el cliente(navegador)
+    </p><br>
+
+<div id="datosjs">
+  <h3>Atributo Evento</h3>
+  <div>
+    <dl><dt>onload:</dt><dd>cuando se termina de cargar la página web</dd></dl>
+    <dl><dt>onunload:</dt><dd> cuando se retira el documento de la ventana del explorador</dd></dl>
+    <dl><dt>onclick:</dt><dd> se realiza click sobre el elemento</dd></dl>
+    <dl><dt>ondbclick:</dt><dd> se realiza un doble click</dd></dl>
+    <dl><dt>onmousedown:</dt><dd> se presiona el botón del mouse sobre el elemento</dd></dl>
+    <dl><dt>onmouseup:</dt><dd> se suelta el botón del mouse sobre el elemento</dd></dl>
+    <dl><dt>onmouseover:</dt><dd> el mouse es puesto sobre el elemento</dd></dl>
+    <dl><dt>onmouseout:</dt><dd> el mouse se retira sobre el elemento</dd></dl>
+    <dl><dt>onfocus:</dt><dd> el elemento recibe el enfoque</dd></dl>
+    <dl><dt>onblur:</dt><dd> el elemento pierde el enfoque</dd></dl>
+    <dl><dt>onkeypress:</dt><dd> una tecla es presionada y luego soltada mientras el elemento tiene el enfoque</dd></dl>
+    <dl><dt>onkeydown:</dt><dd> una tecla es presionada mientras el elemento tiene el enfoque</dd></dl>
+    <dl><dt>onkeyup:</dt><dd> una tecla es soltada mientras el elemento tiene el enfoque</dd></dl>
+    <dl><dt>onsubmit:</dt><dd> ocurre cuando se envía el formulario</dd></dl>
+    <dl><dt>onreset:</dt><dd> se presiona botón reset</dd></dl>
+    <dl><dt>onselect:</dt><dd> se selecciona texto de un campo texto</dd></dl>
+    <dl><dt>onchange:</dt><dd> el emento pierde el enfoque y su valor cambiado desde que recibió el enfoque</dd></dl>
+  </div>
+  <h3>Operadores</h3>
+  <div>
+      <dl><dt>Operadores de asignación:</dt>
+      <li><b>= </b> asignación simple </li>
+      <li><b>+= </b>  suma y asignación O concatenación y asignación</li>
+      <li><b>-= </b>  resta y asignación</li>
+      <li><b>*= </b> multiplicación y asignación</li>
+      <li><b>/= </b> división y asignación</li>
+      </dl>
+      <dl><dt>Operadores numéricos</dt>
+      <li><b>+  </b> suma</li>
+      <li><b>-  </b> resta</li>
+      <li><b>*  </b> multiplicacion</li>
+      <li><b>/  </b> division</li>
+      <li><b>% </b> modulo</li>
+      <li><b>++  </b> auto incremento</li>
+      <li><b>-- </b>  auto decremento</li>
+      </dl>
+      <dl><dt>Operadores de cadena</dt>
+      <li><b> + </b> concatenacion</li>
+      </dl>
+      <dl><dt>operadores lógicos</dt>
+      <li><b> |  </b>  NOT</li>
+      <li><b>%%  </b>   AND</li>
+      <li><b>||  </b>   OR</li>
+      </dl>
+      <dl><dt>Operadores relacionales</dt>
+      <li><b>==  </b>   Igualdad</li>
+      <li><b>!= </b>  Desigualdad</li>
+      <li><b>> </b>   Mayor que</li>
+      <li><b>< </b>   Menor que</li>
+      <li><b>>= </b>  Mayor o igual</li>
+      <li><b><= </b>  Menor o igual</li>
+      </dl>
+  </div>
+  <h3>Estructuras de control</h3>
+  <div>
+      <dl><dt>Estructuras Condicionales</dt>
+      <ul><li><dt>if  </dt>
+      <dd>if(expresión) { bloque}<br>
+      if(expresión) { bloque} else{bloque 2}<br>
+      if(expresión) { bloque} else if(expresión 2) {bloque 2}</dd>
+      </li>
+      <li><dt>Switch</dt>
+      <dd>case valor: bloque1 break
+      case valor: bloque 2 break</dd>
+      </li>
+      </ul>
+      </dl><dt>
+      Estructuras repetitivas o bucles</dt>
+      <ul>
+      <li><dt>While</dt>
+      <dd>
+      While(expresión) {bloque}<br>
+      Do{ bloque} while(expresión)
+      </dd>
+      </li>
+      <li><dt>For</dt>
+      <dd>
+      for(inicializacion; expresion; modificacion){ bloque}
+      </dd>
+      </li>
+      </ul>
+  </div>
+  <h3>Funciones</h3>
+  <div><b>Definicion:</b><br>
+    Bloques de código con nombre que pueden ser ejecutados con solo invocar o escribir el nombre de la funcion<br>
+    Formato: <br>
+    function(nombreFuncion(listaparametros){ <br>
+      <font style="padding-left: 25px;">bloque</font>
+    <br>
+    }
+  </div>
+
+</div>
+ 
+
   </div>
 </div>
